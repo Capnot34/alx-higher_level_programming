@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-
 def new_in_list(my_list, idx, element):
-    # Generate a new list using a list comprehension and conditionals
-    new_list = [element if i == idx else val for i, val in enumerate(my_list)]
-    
-    return new_list
+    new_list = my_list.copy()
+    if idx < 0 or idx > len(my_list) - 1:
+        return new_list
+    else:
+        new_list[idx] = element
+        return new_list
