@@ -30,31 +30,14 @@ def add_integer(a, b=98):
         If a or b are neither int nor float.
     """
 
-    # Check if a or b is NaN
-    if isinstance(a, float) and a != a:
-        raise ValueError("cannot convert float NaN to integer")
-    if isinstance(b, float) and b != b:
-        raise ValueError("cannot convert float NaN to integer")
-
-    # Check if a is neither an integer nor a float
-    if not isinstance(a, (int, float)):
+    
+    if type(a) not in (int, float):
         raise TypeError("a must be an integer")
-    # Check if b is neither an integer nor a float
-    if not isinstance(b, (int, float)):
+    elif type(b) not in (int, float):
         raise TypeError("b must be an integer")
-
-    # Check for float overflow before casting to integers
-    result_float = a + b
-    if result_float == float('inf') or result_float == -float('inf'):
-        raise OverflowError("Float overflow occurred")
-
-    # Cast the numbers to integers after ensuring there's no float overflow
-    a = int(a)
-    b = int(b)
-
-    # Return the sum
-    return a + b
-
+    else:
+        return int(a) + int(b)
+        
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
