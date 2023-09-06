@@ -11,7 +11,6 @@ function in other modules.
 """
 
 def add_integer(a, b=98):
-
     """
     Add two numbers (integers/floats). If they are floats, they are casted to
     integers before addition.
@@ -29,19 +28,13 @@ def add_integer(a, b=98):
     Raises:
     TypeError
         If a or b are neither int nor float.
-
-    Returns:
-        sum of a and b.
-
     """
 
-
-   # Check if a or b is NaN
-if isinstance(a, float) and a != a:
-    raise ValueError("cannot convert float NaN to integer")
-if isinstance(b, float) and b != b:
-    raise ValueError("cannot convert float NaN to integer")
-
+    # Check if a or b is NaN
+    if isinstance(a, float) and a != a:
+        raise ValueError("cannot convert float NaN to integer")
+    if isinstance(b, float) and b != b:
+        raise ValueError("cannot convert float NaN to integer")
 
     # Check if a is neither an integer nor a float
     if not isinstance(a, (int, float)):
