@@ -11,6 +11,7 @@ function in other modules.
 """
 
 def add_integer(a, b=98):
+
     """
     Add two numbers (integers/floats). If they are floats, they are casted to
     integers before addition.
@@ -46,7 +47,9 @@ def add_integer(a, b=98):
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
     """
+
 
     # Handle NaN by replacing with 89
     if a != a:
