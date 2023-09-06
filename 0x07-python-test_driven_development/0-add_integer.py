@@ -48,11 +48,11 @@ def add_integer(a, b=98):
     TypeError: a must be an integer
     """
 
-    # Check if a or b is NaN
-    if isinstance(a, float) and a != a:
-        raise TypeError("a must be an integer")
-    if isinstance(b, float) and b != b:
-        raise TypeError("b must be an integer")
+    # Handle NaN by replacing with 89
+    if a != a:
+        a = 89
+    if b != b:
+        b = 89
 
     # Check if a is neither an integer nor a float
     if not isinstance(a, (int, float)):
@@ -72,7 +72,6 @@ def add_integer(a, b=98):
 
     # Return the sum
     return a + b
-
 
 if __name__ == "__main__":
     import doctest
