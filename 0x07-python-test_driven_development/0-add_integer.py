@@ -61,19 +61,18 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    # Cast the numbers to integers if they are floats
+    # Check for float overflow before casting to integers
+    result_float = a + b
+    if result_float == float('inf') or result_float == -float('inf'):
+        raise OverflowError("Float overflow occurred")
+
+    # Cast the numbers to integers after ensuring there's no float overflow
     a = int(a)
     b = int(b)
 
-
     # Return the sum
     return a + b
-    
-    # Check for integer overflow
-    if result > 9223372036854775807 or result < -9223372036854775808:
-        raise OverflowError("Integer overflow occurred")
 
-    return result
 
 if __name__ == "__main__":
     import doctest
