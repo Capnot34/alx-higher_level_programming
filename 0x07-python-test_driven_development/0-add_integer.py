@@ -36,11 +36,12 @@ def add_integer(a, b=98):
     """
 
 
-    # Handle NaN by replacing with 89
-    if a != a:
-        a = 89
-    if b != b:
-        b = 89
+   # Check if a or b is NaN
+if isinstance(a, float) and a != a:
+    raise ValueError("cannot convert float NaN to integer")
+if isinstance(b, float) and b != b:
+    raise ValueError("cannot convert float NaN to integer")
+
 
     # Check if a is neither an integer nor a float
     if not isinstance(a, (int, float)):
