@@ -1,16 +1,20 @@
 #!/usr/bin/python3
 """
-Module 3-rectangle
+Module 6-rectangle
 Defines a Rectangle.
 """
 
 class Rectangle:
     """Represents a Rectangle."""
+    
+    # Class attribute to keep track of the number of instances
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initializes the rectangle."""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1  # Increment the number of instances
 
     @property
     def width(self):
@@ -50,3 +54,22 @@ class Rectangle:
             return 0
         return 2 * self.__width + 2 * self.__height
 
+    def __str__(self):
+        """String representation of the rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+    
+        rectangle_str = []
+        for _ in range(self.__height):
+            rectangle_str.append("#" * self.__width)
+    
+        return "\n".join(rectangle_str)
+
+    def __repr__(self):
+        """Official string representation."""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Prints a message when the rectangle is deleted and decrements the number of instances."""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1  # Decrement the number of instances
