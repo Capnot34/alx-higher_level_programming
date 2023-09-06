@@ -68,6 +68,12 @@ def add_integer(a, b=98):
 
     # Return the sum
     return a + b
+    
+    # Check for integer overflow
+    if result > 9223372036854775807 or result < -9223372036854775808:
+        raise OverflowError("Integer overflow occurred")
+
+    return result
 
 if __name__ == "__main__":
     import doctest
