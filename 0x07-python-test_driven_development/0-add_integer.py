@@ -37,6 +37,7 @@ def add_integer(a, b=98):
         ...
     TypeError: a must be an integer
     """
+
     # Check if a or b is NaN
     if isinstance(a, float) and a != a:
         raise TypeError("a must be an integer")
@@ -53,6 +54,7 @@ def add_integer(a, b=98):
     # Cast the numbers to integers if they are floats
     a = int(a)
     b = int(b)
+
 
     # Return the sum
     return a + b
