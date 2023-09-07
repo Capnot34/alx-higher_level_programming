@@ -31,11 +31,12 @@ if __name__ == "__main__":
         """determines whether or not to reject the solution"""
         if (already_exists(y)):
             return False
-        i = 0 
+        i = 0
 
         while(i < x):
             if abs(a[i][1] - y) == abs(i - x):
                 return False
+
             i += 1
         return True
 
