@@ -33,7 +33,7 @@ if __name__ == "__main__":
             return False
         i = 0
 
-        while(i < x):
+        while (i < x):
             if abs(a[i][1] - y) == abs(i - x):
                 return False
 
