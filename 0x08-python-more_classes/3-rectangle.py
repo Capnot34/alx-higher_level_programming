@@ -4,6 +4,7 @@ Module 3-rectangle
 Defines a Rectangle.
 """
 
+
 class Rectangle:
     """Represents a Rectangle."""
 
