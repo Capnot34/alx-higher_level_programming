@@ -4,9 +4,10 @@ Module 6-rectangle
 Defines a Rectangle.
 """
 
+
 class Rectangle:
     """Represents a Rectangle."""
-    
+
     # Class attribute to keep track of the number of instances
     number_of_instances = 0
 
@@ -58,11 +59,11 @@ class Rectangle:
         """String representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-    
+
         rectangle_str = []
         for _ in range(self.__height):
             rectangle_str.append("#" * self.__width)
-    
+
         return "\n".join(rectangle_str)
 
     def __repr__(self):
@@ -70,6 +71,8 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Prints a message when the rectangle is deleted and decrements the number of instances."""
+        """Prints a message when the rectangle is deleted 
+        and decrements the number of instances.
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1  # Decrement the number of instances
