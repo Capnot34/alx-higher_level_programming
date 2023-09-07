@@ -64,4 +64,4 @@ class Rectangle:
 
     def __repr__(self):
         """Official string representation."""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return "<{}.{} object at {}>".format(self.__module__, self.__class__.__name__, id(self))
