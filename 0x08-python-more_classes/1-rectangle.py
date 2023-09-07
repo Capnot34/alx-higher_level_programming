@@ -4,10 +4,9 @@ Module 1-rectangle
 Defines a Rectangle.
 """
 
+
 class Rectangle:
     """Represents a Rectangle."""
-
-
     def __init__(self, width=0, height=0):
         """Initializes the rectangle."""
         self.height = height
