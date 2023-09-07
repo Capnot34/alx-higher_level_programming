@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix by div.
     
@@ -28,4 +29,3 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     return [[round(n / div, 2) for n in row] for row in matrix]
-
