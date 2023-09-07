@@ -4,6 +4,7 @@ Module 5-rectangle
 Defines a Rectangle.
 """
 
+
 class Rectangle:
     """Represents a Rectangle."""
 
@@ -54,7 +55,7 @@ class Rectangle:
         """String representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-    
+
         rectangle_str = []
         for _ in range(self.__height):
             rectangle_str.append("#" * self.__width)
