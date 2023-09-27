@@ -1,0 +1,11 @@
+>>> from 5-text_indentation import text_indentation
+>>> text_indentation("Hello, World! How are you? I hope all is well.")
+Hello, World!
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I hope all is well.
+>>> text_indentation("Not a string?")
+Traceback (most recent call last):
+...
+TypeError: text must be a string
