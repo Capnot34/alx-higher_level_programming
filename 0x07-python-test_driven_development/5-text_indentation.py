@@ -19,8 +19,8 @@ def text_indentation(text):
     for delimiter in ['.', '?', ':']:
         text = text.replace(delimiter, delimiter + '\n\n')
 
-    text = '\n'.join([line.strip() for line in text.split('\n')]):
-        print(text)
+    for line in text.split('\n'):
+        print(line.strip())
 
 if __name__ == "__main__":
     text_indentation("Hello, World! How are you? I hope all is well.")
