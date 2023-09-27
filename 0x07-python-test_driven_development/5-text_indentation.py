@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module provides a function to indent a given text after certain punctuation marks.
+"""
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each of these characters: ., ? and :
