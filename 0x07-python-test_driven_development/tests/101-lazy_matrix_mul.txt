@@ -1,0 +1,48 @@
+>>> from 101-lazy_matrix_mul import lazy_matrix_mul  # This is the change
+
+Trying:
+    lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+Expecting:
+    array([[ 7, 10],
+           [15, 22]])
+
+Trying:
+    lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+Expecting:
+    array([[13, 16]])
+
+Trying:
+    lazy_matrix_mul([1, 2], [[3, 4], [5, 6]])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: ...
+
+Trying:
+    lazy_matrix_mul([[1, 2]], [3, 4])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: ...
+
+Trying:
+    lazy_matrix_mul([[1, 2]], [[3, 4, 5], [5, 6, 7]])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: ...
+
+Trying:
+    lazy_matrix_mul([], [[3, 4], [5, 6]])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: ...
+
+Trying:
+    lazy_matrix_mul([[1, 2]], [[]])
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: ...
+
