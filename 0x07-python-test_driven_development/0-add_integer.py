@@ -11,10 +11,12 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: if a, b are neither int nor float.
+        OverflowError: if a, b are too large to convert to int.
 
     Returns:
         sum of a and b.
     """
+     max_float = 1.79e308
 
     if type(a) not in (int, float):
         raise TypeError("a must be an integer")
