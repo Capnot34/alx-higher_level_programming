@@ -43,6 +43,8 @@ In this project, we'll be dealing with:
 | 14          | **Log parsing**                    | Write a script that reads stdin line by line and computes metrics.                                             | [View Code](./14-log_parsing.py)                  |
 
 
-**Author**: `Gift Amachree`
+
+**Author**: [Gift Amachree](https://www.linkedin.com/in/gift-amachree-8a523623b/)
+
 
 ---
