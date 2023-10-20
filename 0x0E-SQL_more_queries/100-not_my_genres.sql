@@ -1,11 +1,13 @@
 -- Lists all genres not linked to the show "Dexter"
-SELECT tg.name AS genre_name
-FROM tv_genres tg
-WHERE tg.id NOT IN (
-    SELECT tsg.genre_id
-    FROM tv_show_genres tsg
-    JOIN tv_shows ts ON tsg.show_id = ts.id
-    WHERE ts.title = 'Dexter'
+SELECT name 
+FROM tv_genres 
+WHERE id NOT IN (
+    SELECT genre_id 
+    FROM tv_show_genres 
+    WHERE show_id = (
+        SELECT id 
+        FROM tv_shows 
+        WHERE title = 'Dexter'
+    )
 )
-ORDER BY tg.name ASC;
-
+ORDER BY name ASC;
