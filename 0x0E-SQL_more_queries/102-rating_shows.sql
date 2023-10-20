@@ -1,12 +1,6 @@
 -- Lists all shows sorted by their rating in descending order
-SELECT 
-    ts.title AS show_title,
-    SUM(tr.rating) AS rating_sum
-FROM 
-    tv_shows ts
-JOIN 
-    tv_show_ratings tr ON ts.id = tr.show_id
-GROUP BY 
-    ts.title
-ORDER BY 
-    rating_sum DESC;
+SELECT tv_shows.title AS title, COALESCE(SUM(tv_show_ratings.rate), 0) AS rating
+FROM tv_shows
+LEFT JOIN tv_show_ratings ON tv_shows.id = tv_show_ratings.show_id
+GROUP BY tv_shows.title
+ORDER BY rating DESC, title ASC;
