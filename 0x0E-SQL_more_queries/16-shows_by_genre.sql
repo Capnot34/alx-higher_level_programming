@@ -1,7 +1,7 @@
 -- Lists all shows and their genres (if any)
 SELECT
     tv_shows.title AS title,
-    IFNULL(tv_genres.name, 'NULL') AS genre
+    IFNULL(tv_genres.name, 'NULL') AS name
 FROM
     tv_shows
 LEFT JOIN
