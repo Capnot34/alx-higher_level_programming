@@ -1,12 +1,16 @@
 #!/usr/bin/node
+
 function add (a, b) {
-  console.log(parseInt(a) + parseInt(b));
+  return parseInt(a) + parseInt(b);
 }
+
+// Check if both arguments are provided
 const arg1 = process.argv[2];
 const arg2 = process.argv[3];
 
-if (arg1 !== undefined && arg2 !== undefined) {
-  add(arg1, arg2);
+// Check if both arguments are numbers
+if (!isNaN(arg1) && !isNaN(arg2)) {
+  console.log(add(arg1, arg2));
 } else {
-  console.log('NAN');
+  console.log('NaN');
 }
