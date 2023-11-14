@@ -1,10 +1,7 @@
 #!/usr/bin/node
 
-let i = "C is fun";
-let b = "Python is cool";
-let c = "JavaScript is amazing";
+const myVars = { i: "C is fun", b: "Python is cool", c: "JavaScript is amazing" };
 
-console.log(i);
-console.log(b);
-console.log(c);
-
+for (const items in myVars) {
+    console.log(myVars[items]);
+}
