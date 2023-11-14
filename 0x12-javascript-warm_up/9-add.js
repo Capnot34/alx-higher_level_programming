@@ -7,4 +7,6 @@ const arg2 = process.argv[3];
 
 if (arg1 !== undefined && arg2 !== undefined) {
   add(arg1, arg2);
+} else {
+  console.log('NAN');
 }
