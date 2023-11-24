@@ -9,7 +9,7 @@ In the first part of our quest, you'll wield the power of the MySQLdb module to 
 ## 📚 Tasks
 
 ### 0. Get all states
-- [File: 0-select_states.py](./0x0F-python-object_relational_mapping/0-select_states.py)
+- [File: 0-select_states.py](/0x0F-python-object_relational_mapping/0-select_states.py)
 - Description: 📜 Write a script that lists all states from the magical database `hbtn_0e_0_usa`. See the file for details.
 
 ### 1. Filter states
