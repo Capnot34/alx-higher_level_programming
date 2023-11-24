@@ -1,9 +1,7 @@
 # 🌈 0x0F. Python - Object-relational mapping 🦄
 
 ## 🚀 Introduction
-Welcome to the magical world of Python and databases! In this enchanting project, we'll embark on a journey into the realms of Object-Relational Mapping (ORM), where Python code and databases dance together harmoniously. Our guides for this adventure include mystical modules like MySQLdb and SQLAlchemy.
-
-Before you start, make sure your MySQL server is upgraded to version 8.0. Fear not! A spellbook to guide you through the installation awaits [here](https://example.com).
+This project serves as a captivating union between the worlds of Databases and Python. Divided into two key parts, the journey begins with the use of the MySQLdb module for direct MySQL database interactions through SQL queries. In the second part, we delve into the realm of SQLAlchemy, an Object Relational Mapper (ORM), which liberates us from explicit SQL queries, allowing a Python-centric approach to database interactions. This project empowers you to seamlessly connect, query, and manipulate databases using the versatility of Python, bridging the gap between traditional and modern database practices.
 
 ## 🧙‍♂️ Background Context
 In the first part of our quest, you'll wield the power of the MySQLdb module to connect to a MySQL database and cast SQL spells. In the second part, you'll delve into the art of SQLAlchemy, a masterful Object-Relational Mapper (ORM), allowing you to weave storage operations seamlessly into your Python code.
