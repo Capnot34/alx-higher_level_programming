@@ -6,5 +6,5 @@ if (process.argv[2]) {
   console.log(process.argv[2]);
 } else {
   // If no argument is passed, print "No argument"
-  console.log("No argument");
+  console.log('No argument');
 }
