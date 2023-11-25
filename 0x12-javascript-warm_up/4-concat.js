@@ -1,10 +1,12 @@
 #!/usr/bin/node
 
-// Check if at least two arguments are passed
-if (process.argv[2] && process.argv[3]) {
-  // If two arguments are passed, print them in the specified format
-  console.log(`${process.argv[2]} is ${process.argv[3]}`);
+// Get the first and second arguments from the command line
+const arg1 = process.argv[2];
+const arg2 = process.argv[3];
+
+// Check if both arguments are provided
+if (arg1 && arg2) {
+  console.log(arg1 + ' is ' + arg2);
 } else {
-  // If fewer than two arguments are passed, print "undefined is undefined"
   console.log('undefined is undefined');
 }
