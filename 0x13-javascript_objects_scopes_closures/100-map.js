@@ -9,4 +9,3 @@ const newList = list.map((value, index) => value * index);
 // Print both the initial and new lists
 console.log(list);
 console.log(newList);
-
