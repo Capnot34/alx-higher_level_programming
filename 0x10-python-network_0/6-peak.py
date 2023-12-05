@@ -3,29 +3,28 @@
 
 
 def find_peak(list_of_integers):
-    """Find a peak in a list of unsorted integers."""
-    if not list_of_integers:
+
+    if list_of_integers is None or len(list_of_integers) == 0:
         return None
 
-    n = len(list_of_integers)
-    mid = n // 2
-    peak = list_of_integers[mid]
+    if len(list_of_integers) == 1:
+        return list_of_integers[0]
 
-    if (mid == 0 or list_of_integers[mid - 1] <= peak) and \
-            (mid == n - 1 or list_of_integers[mid + 1] <= peak):
-        return peak
+    mid_idx = int(len(list_of_integers) / 2)
 
-    if mid > 0 and list_of_integers[mid - 1] > peak:
-        return find_peak(list_of_integers[:mid])
+    if mid_idx != len(list_of_integers) - 1:
+        if list_of_integers[mid_idx - 1] < list_of_integers[mid_idx] and\
+           list_of_integers[mid_idx + 1] < list_of_integers[mid_idx]:
+            return list_of_integers[mid_idx]
     else:
-        return find_peak(list_of_integers[mid + 1:])
+        if list_of_integers[mid_idx - 1] < list_of_integers[mid_idx]:
+            return list_of_integers[mid_idx]
+        else:
+            return list_of_integers[mid_idx - 1]
 
+    if list_of_integers[mid_idx - 1] > list_of_integers[mid_idx]:
+        a_list = list_of_integers[0:mid_idx]
+    else:
+        a_list = list_of_integers[mid_idx + 1:]
 
-# Test cases
-if __name__ == "__main__":
-    print(find_peak([1, 2, 4, 6, 3]))
-    print(find_peak([4, 2, 1, 2, 3, 1]))
-    print(find_peak([2, 2, 2]))
-    print(find_peak([]))
-    print(find_peak([-2, -4, 2, 1]))
-    print(find_peak([4, 2, 1, 2, 2, 2, 3, 1]))
+    return find_peak(a_list)
