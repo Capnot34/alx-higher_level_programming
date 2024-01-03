@@ -9,7 +9,5 @@ const content = process.argv[3]; // Get the string to write from the command lin
 fs.writeFile(filePath, content, 'utf-8', (err) => {
   if (err) {
     console.error(err); // Print the error if it occurred
-  } else {
-    console.log(`${content}`);
   }
 });
