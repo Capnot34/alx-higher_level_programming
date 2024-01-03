@@ -18,11 +18,6 @@ request.get(apiUrl, (error, response, body) => {
         if (!error) {
           const characterData = JSON.parse(characterBody);
           console.log(characterData.name);
-
-          // Check if it's the last character, then print an empty line
-          if (index === movie.characters.length - 1) {
-            console.log('');
-          }
         }
       });
     });
