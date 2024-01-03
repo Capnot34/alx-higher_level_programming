@@ -11,7 +11,13 @@ request.get(apiUrl, (error, response, body) => {
     console.error(error); // Print the error if it occurred
   } else {
     const films = JSON.parse(body).results;
-    const wedgeMovies = films.filter((film) => film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`));
-    console.log(wedgeMovies.length); // Print the number of movies
+    const wedgeMovies = films.reduce((count, film) => {
+      if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
+        return count + 1;
+      }
+      return count;
+    }, 0);
+
+    console.log(wedgeMovies); // Print the number of movies
   }
 });
