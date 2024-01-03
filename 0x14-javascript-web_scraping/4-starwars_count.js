@@ -11,11 +11,10 @@ request.get(apiUrl, (error, response, body) => {
     console.error(error); // Print the error if it occurred
   } else {
     const films = JSON.parse(body).results;
+    
+    // Use find to check if Wedge Antilles is present in each movie
     const wedgeMovies = films.reduce((count, film) => {
-      if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
-        return count + 1;
-      }
-      return count;
+      return count + (film.characters.find(char => char.includes(`/people/${characterId}/`)) ? 1 : 0);
     }, 0);
 
     console.log(wedgeMovies); // Print the number of movies
