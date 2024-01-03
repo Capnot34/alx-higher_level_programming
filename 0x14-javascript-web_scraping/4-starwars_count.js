@@ -11,7 +11,7 @@ request.get(apiUrl, (error, response, body) => {
     console.error(error); // Print the error if it occurred
   } else {
     const films = JSON.parse(body).results;
-    
+
     // Use find to check if Wedge Antilles is present in each movie
     const wedgeMovies = films.reduce((count, film) => {
       return count + (film.characters.find(char => char.includes(`/people/${characterId}/`)) ? 1 : 0);
