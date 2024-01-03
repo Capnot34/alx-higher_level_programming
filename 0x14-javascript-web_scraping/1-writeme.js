@@ -10,6 +10,6 @@ fs.writeFile(filePath, content, 'utf-8', (err) => {
   if (err) {
     console.error(err); // Print the error if it occurred
   } else {
-    console.log(`Content written to ${filePath}`);
+    console.log(`${content}`);
   }
 });
