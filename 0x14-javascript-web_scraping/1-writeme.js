@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const fs = resquire('fs');
+const fs = require('fs');
 
 const filePath = process.argv[2];  // Get the file path from the command line arguments
 const content = process.argv[3]; // Get the string to write from the command line arguments
