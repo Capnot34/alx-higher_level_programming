@@ -13,6 +13,5 @@ request.get(url, (error, response, body) => {
   } else {
     // Write the body response to the file in UTF-8 encoding
     fs.writeFileSync(filePath, body, 'utf-8');
-    console.log(`Body response stored in ${filePath}`);
   }
 });
